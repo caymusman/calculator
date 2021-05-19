@@ -1,0 +1,211 @@
+$background: #3c3c3d;
+
+body{
+  background-color: $background;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+#mainDiv{
+  height: 60vh;
+  max-height: 700px;
+  width: 45vh;
+  position:fixed;
+  left: 49%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: $background;
+  border: 4px solid gray;
+  transition: box-shadow 2s;
+  font-family: 'Share Tech Mono', monospace;
+  &:hover{
+    box-shadow: 5px 5px gray, 10px 10px darken(gray, 10%), 15px 15px darken(gray, 20%);
+    #longDis{
+      p{
+        transition:color 2s;
+        color: orange;
+      }
+    }
+    #display{
+      p{
+        transition: color 2s;
+        color: white;
+      }
+    }
+  }
+}
+
+#longDis, #display{
+  font-size: 5.38vh;
+  width: 100%;
+  height: 10%;
+  margin-top: -12%;;
+  background: black;
+  text-align: right;
+  p{
+    margin-right: 5%;
+    transition: color 5s;
+  }
+}
+
+#allButtons{
+  height: 80%;
+  display: grid;
+  grid-template: repeat(5, 20%) / repeat(4, 25%);
+}
+
+.buttonClass{
+  font-size: 3vh;
+  font-family: serif;
+  color: black;
+  &:hover{
+    color: white;
+  }
+}
+
+#clear{
+  grid-area: 1 / 1 / 1 / span 3;
+  &:hover{
+    background: darken(red, 10%);
+  }
+  &:active{
+    background: darken(red, 17%);
+  }
+}
+#zero{
+  grid-area: 5/ 2 / 5 / 3;
+}
+
+
+#divide, #multiply, #add, #subtract, #equals, #decimal{
+  &:hover{
+    background: green;
+    box-shadow: 5px 5px gray, 10px 10px darken(gray, 10%), 15px 15px darken(gray, 20%);
+  }
+}
+
+#decimal{
+  &:hover{
+    background: gray;
+  }
+  &:active{
+    background: darken(gray, 13.5%);
+  } 
+}
+
+#equals{
+  grid-row: 5;
+  grid-column: 3 / 5;
+  &:hover{
+    background: darken(orange, 10%);
+  }
+  &:active{
+    background: darken(orange, 13.5%);
+  }
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero{
+  &:hover{
+    background: lighten(blue, 19%);
+  }
+}
+
+#errorP{
+    transition: opacity .5s, visibility .5s;
+    background: #eee;
+    text-align: center;
+    border-radius: 3px;
+    padding: 2px 1px 1px 1px;
+    margin-top: 40px;
+}
+
+.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (min-height: 300px) and (orientation:portrait){
+    #mainDiv{
+        width: 80vw;
+        height: 60vh;
+
+        &:hover{
+            box-shadow: none;
+        }
+        display: flex;
+    }
+
+    #allButtons{
+        align-self: flex-end;
+        grid-template: repeat(5, 20%)/repeat(4, 20vw);
+    }
+
+    #longDis, #display{
+        font-size: 5vh;
+        min-width: 80vw;
+        height: 6vh;
+        max-height: 6vh;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-top: -14%;;
+        background: black;
+        text-align: right;
+        position:absolute;
+        p{
+            margin-top: .5vh;
+          margin-right: 5%;
+        }
+      }
+    #longDis{
+        top: 5vh;
+        p{
+            color: darken(orange, 10%);
+        }
+    }
+
+    #display{
+        top: 11vh;
+        p{
+            color: white;
+        };
+    }
+
+    #divide, #multiply, #add, #subtract, #equals, #decimal{
+        &:hover{
+          box-shadow: none;
+        }
+
+        &:active{
+            background: green;
+        }
+      }
+      
+      #decimal{
+        &:active{
+          background: darken(gray, 13.5%);
+        } 
+      }
+      
+      #equals{
+        grid-row: 5;
+        grid-column: 3 / 5;
+        &:active{
+          background: darken(orange, 13.5%);
+        }
+      }
+      
+      #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero{
+        &:active{
+          background: lighten(blue, 19%);
+        }
+      }
+
+      #errorP{
+          position: absolute;
+          bottom: -10vh;
+      }
+}
