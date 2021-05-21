@@ -164,7 +164,7 @@ class App extends React.Component{
   
   updateDisplay(num){
     //handle length
-    if(this.state.longDisplay.length > 14 || (this.state.longDisplay.length >= 12 && myIncludes(ops, num, "symb"))){
+    if(this.state.longDisplay.length > 25 || (this.state.longDisplay.length >= 24 && myIncludes(ops, num, "symb"))){
       return;
     }
     //handle restarting with just a math symbol
