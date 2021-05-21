@@ -63,9 +63,6 @@ body{
 }
 
 .buttonClass{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   font-size: 3vh;
   border-radius: 0px;
   width: 100%;
@@ -102,9 +99,6 @@ body{
 }
 
 #decimal{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   width: 100%;
   height: 100%;
   &:hover{
@@ -117,9 +111,6 @@ body{
 }
 
 #equals{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   width: 100%;
   height: 100%;
   grid-row: 5;
@@ -170,18 +161,17 @@ body{
         }
     }
 
-    #allButtons{
-        grid-template: repeat(5, 20%)/repeat(4, 20vw);
-    }
-
-    .buttonClass{
+    input[type=button]{
       appearance: none;
       -webkit-appearance:none;
       -moz-appearance: none;
       background-color:#eee;
       width: 100%;
       height: 100%;
-      
+    }
+
+    #allButtons{
+        grid-template: repeat(5, 20%)/repeat(4, 20vw);
     }
 
     #longDis{
