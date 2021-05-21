@@ -51,11 +51,11 @@ class Btn extends React.Component{
   
   render(){
     return(
-      <button
+      <input type="button"
         id={this.props.id}
         onClick={this.handleClick}
         className="buttonClass"
-        >{this.props.val}</button>
+        value={this.props.val}></input>
         )
   }
 }
@@ -69,7 +69,7 @@ class AllButtons extends React.Component{
   render(){
     return(
       <div id="allButtons">
-        <button id="clear" onClick={this.props.clear} className="buttonClass">AC</button>
+        <input type="button" id="clear" onClick={this.props.clear} className="buttonClass" value="AC"></input>
         <Btn id="divide" val=" / " display={this.props.display}/> 
         <Btn id="seven" val="7" display={this.props.display}/> 
         <Btn id="eight" val="8" display={this.props.display}/> 
@@ -83,8 +83,8 @@ class AllButtons extends React.Component{
         <Btn id="two" val="2" display={this.props.display}/> 
         <Btn id="three" val="3" display={this.props.display}/> 
         <Btn id="add" val=" + " display={this.props.display}/>
-        <button id="equals" onClick={this.props.equals}>=</button> 
-        <button id="decimal" onClick={this.props.decimal}>.</button>  
+        <input type="button" id="equals" onClick={this.props.equals} value="="></input> 
+        <input type="button" id="decimal" onClick={this.props.decimal} value="."></input>  
         <Btn id="zero" val="0" display={this.props.display}/>  
         </div>
         

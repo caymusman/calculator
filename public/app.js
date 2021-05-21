@@ -52,15 +52,11 @@ var Btn = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return React.createElement(
-        "button",
-        {
-          id: this.props.id,
-          onClick: this.handleClick,
-          className: "buttonClass"
-        },
-        this.props.val
-      );
+      return React.createElement("input", { type: "button",
+        id: this.props.id,
+        onClick: this.handleClick,
+        className: "buttonClass",
+        value: this.props.val });
     }
   }]);
 
@@ -82,11 +78,7 @@ var AllButtons = function (_React$Component2) {
       return React.createElement(
         "div",
         { id: "allButtons" },
-        React.createElement(
-          "button",
-          { id: "clear", onClick: this.props.clear, className: "buttonClass" },
-          "AC"
-        ),
+        React.createElement("input", { type: "button", id: "clear", onClick: this.props.clear, className: "buttonClass", value: "AC" }),
         React.createElement(Btn, { id: "divide", val: " / ", display: this.props.display }),
         React.createElement(Btn, { id: "seven", val: "7", display: this.props.display }),
         React.createElement(Btn, { id: "eight", val: "8", display: this.props.display }),
@@ -100,16 +92,8 @@ var AllButtons = function (_React$Component2) {
         React.createElement(Btn, { id: "two", val: "2", display: this.props.display }),
         React.createElement(Btn, { id: "three", val: "3", display: this.props.display }),
         React.createElement(Btn, { id: "add", val: " + ", display: this.props.display }),
-        React.createElement(
-          "button",
-          { id: "equals", onClick: this.props.equals },
-          "="
-        ),
-        React.createElement(
-          "button",
-          { id: "decimal", onClick: this.props.decimal },
-          "."
-        ),
+        React.createElement("input", { type: "button", id: "equals", onClick: this.props.equals, value: "=" }),
+        React.createElement("input", { type: "button", id: "decimal", onClick: this.props.decimal, value: "." }),
         React.createElement(Btn, { id: "zero", val: "0", display: this.props.display })
       );
     }

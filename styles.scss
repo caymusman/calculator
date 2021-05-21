@@ -63,7 +63,11 @@ body{
 }
 
 .buttonClass{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   font-size: 3vh;
+  border-radius: 0px;
   width: 100%;
   height: 100%;
   font-family: serif;
@@ -162,6 +166,16 @@ body{
 
     #allButtons{
         grid-template: repeat(5, 20%)/repeat(4, 20vw);
+    }
+
+    .buttonClass{
+      appearance: none;
+      -webkit-appearance:none;
+      -moz-appearance: none;
+      background-color:#eee;
+      width: 100%;
+      height: 100%;
+      
     }
 
     #longDis{
