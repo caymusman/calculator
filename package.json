@@ -4,7 +4,8 @@
   "description": "A simple React calculator app with CSS styling.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "npx babel --watch src --out-dir ./public --presets react-app/prod"
   },
   "repository": {
     "type": "git",

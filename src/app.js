@@ -1,5 +1,8 @@
 /*
-  Note on the design of this program: I originally coded this program with multiple react components to handle the rendering of the math buttons and the number buttons with a map to save space and time. The issue with that approach is that it left me unable to easily use CSS Grid. I refactored with Btns and Buttons for ease of use of CSS Grid.
+  Note on the design of this program: I originally coded this program with multiple react components 
+    to handle the rendering of the math buttons and the number buttons with a map to save space and time. 
+    The issue with that approach is that it left me unable to easily use CSS Grid. 
+    I refactored with Btns and Buttons for ease of use of CSS Grid.
 */
 let nums = [{num: 0,
             name: "zero"},
@@ -83,8 +86,8 @@ class AllButtons extends React.Component{
         <Btn id="two" val="2" display={this.props.display}/> 
         <Btn id="three" val="3" display={this.props.display}/> 
         <Btn id="add" val=" + " display={this.props.display}/>
-        <input type="button" id="equals" onClick={this.props.equals} value="="></input> 
-        <input type="button" id="decimal" onClick={this.props.decimal} value="."></input>  
+        <input type="button" id="equals" className="buttonClass" onClick={this.props.equals} value="="></input> 
+        <input type="button" id="decimal" className="buttonClass" onClick={this.props.decimal} value="."></input>  
         <Btn id="zero" val="0" display={this.props.display}/>  
         </div>
         

@@ -7,7 +7,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /*
-  Note on the design of this program: I originally coded this program with multiple react components to handle the rendering of the math buttons and the number buttons with a map to save space and time. The issue with that approach is that it left me unable to easily use CSS Grid. I refactored with Btns and Buttons for ease of use of CSS Grid.
+  Note on the design of this program: I originally coded this program with multiple react components 
+    to handle the rendering of the math buttons and the number buttons with a map to save space and time. 
+    The issue with that approach is that it left me unable to easily use CSS Grid. 
+    I refactored with Btns and Buttons for ease of use of CSS Grid.
 */
 var nums = [{ num: 0,
   name: "zero" }, { num: 1,
@@ -92,8 +95,8 @@ var AllButtons = function (_React$Component2) {
         React.createElement(Btn, { id: "two", val: "2", display: this.props.display }),
         React.createElement(Btn, { id: "three", val: "3", display: this.props.display }),
         React.createElement(Btn, { id: "add", val: " + ", display: this.props.display }),
-        React.createElement("input", { type: "button", id: "equals", onClick: this.props.equals, value: "=" }),
-        React.createElement("input", { type: "button", id: "decimal", onClick: this.props.decimal, value: "." }),
+        React.createElement("input", { type: "button", id: "equals", className: "buttonClass", onClick: this.props.equals, value: "=" }),
+        React.createElement("input", { type: "button", id: "decimal", className: "buttonClass", onClick: this.props.decimal, value: "." }),
         React.createElement(Btn, { id: "zero", val: "0", display: this.props.display })
       );
     }
